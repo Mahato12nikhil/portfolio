@@ -4,10 +4,10 @@ import styles from './Home.module.css';
 import About from '../about/About';
 import Experience from '../experience/Experience';
 import Project from '../projects/Project';
-import Feats from '../feats/Feats';
+import Contact from '../contact/Contact';
 
 const Home: React.FC = () => {
-    const sections:string[] = ['home', 'about', 'experience','projects','feats'];
+    const sections:string[] = ['home', 'about', 'journey','projects','contact'];
     const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
@@ -49,17 +49,17 @@ const Home: React.FC = () => {
                     <h3>Nikhil Mahato</h3>
                     <h4>Application Developer</h4>
                 </section>
-                <section id="about" className={[styles.section_container, styles.section_margin].join("")}>
+                <section id="about" className={styles.section_container}>
                     <About/>
                 </section>
-                <section id="experience" className={[styles.section_container ,styles.section_margin].join("")}>
+                <section id="journey" className={[styles.section_container ,styles.section_margin].join("")}>
                     <Experience/>
                 </section>
                 <section id="projects" className={[styles.section_container ,styles.section_margin].join("")}>
                     <Project/>
                 </section>
-                <section id="feats" className={[styles.section_container ,styles.section_margin].join("")}>
-                    <Feats/>
+                <section id="contact" className={[styles.section_container ,styles.section_margin].join("")}>
+                    <Contact/>
                 </section>
             </div>
         </div>

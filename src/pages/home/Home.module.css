@@ -36,17 +36,17 @@
     transform: translateY(-50%);
 }
 .sections{
-    width: 100%;
     z-index: 1; 
 }
 .section_container{
-    min-height: 100vh;
+    height: 100vh;
+    background-color: white;
+
 }
 .experience_container{
     min-height: 100vh;
 }
 .section_margin{
-    margin-left: 5%;
 }
 /* tablet */
 @media screen and (max-width: 768px){

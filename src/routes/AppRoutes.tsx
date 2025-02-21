@@ -3,7 +3,7 @@ import Home from "../pages/home/Home"
 import Admin from "../pages/admin/Admin";
 import AuthGuard from "../components/AuthGuard";
 
-type RoutePath="/" | "/home" | "/projects" | "/admin" | "/experience" | "/about" | "/feats";
+type RoutePath="/" | "/home" | "/projects" | "/admin" | "/journey" | "/about" | "/contact";
 
 interface RouteConfig<T extends string=RoutePath>{
     path:T,
@@ -12,10 +12,10 @@ interface RouteConfig<T extends string=RoutePath>{
 const routes:RouteConfig<RoutePath>[]=[
     {path: "/", element: <Home /> },
     {path: "/home", element: <Home /> },
-    {path: "/experience", element: <Home /> },
+    {path: "/journey", element: <Home /> },
     {path: "/about", element: <Home /> },
     {path: "/projects", element: <Home /> },
-    {path: "/feats", element: <Home />},
+    {path: "/contact", element: <Home />},
     {path: "/admin", element: <AuthGuard><Admin /></AuthGuard> },
 ]
 const AppRoutes:React.FC=()=>{
