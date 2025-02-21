@@ -3,13 +3,14 @@ import Home from "../pages/home/Home"
 import Admin from "../pages/admin/Admin";
 import AuthGuard from "../components/AuthGuard";
 
-type RoutePath="/" | "/home" | "/projects" | "/admin" | "/journey" | "/about" | "/contact";
+type RoutePath="/" | "/home" | "/projects" | "/admin" | "/journey" | "/about" | "/contact" | '/portfolio';
 
 interface RouteConfig<T extends string=RoutePath>{
     path:T,
     element:React.ReactNode
 }
 const routes:RouteConfig<RoutePath>[]=[
+    {path: "/portfolio", element: <Home /> },
     {path: "/", element: <Home /> },
     {path: "/home", element: <Home /> },
     {path: "/journey", element: <Home /> },
